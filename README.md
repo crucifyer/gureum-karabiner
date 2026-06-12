@@ -31,7 +31,7 @@ brew install --cask gureumkim
 
 ![setting.system](./images/setting.system.png)
 ![setting.inputsource](./images/setting.inputsource.png)
-![setting.gureum](./images/setting.gureum.png){: width="500" height="976"}
+![setting.gureum](./images/setting.gureum.png)
 
 ## 간단한 버전
 
