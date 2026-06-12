@@ -96,3 +96,12 @@ brew install --cask gureumkim
 
 [inputsource.gureum.han390fix.json](./inputsource.gureum.han390fix.json)
 * 이 우회법은 karabiner-elements 만으로 동작합니다.
+
+## vim esc 영문 전환
+
+* esc 로 영문 전환은 vim 에서만 편리합니다.
+* ~/.vimrc
+
+```vimrc
+inoremap <silent> <Esc> <Esc>:!/Library/Input\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent roman<CR><Esc>
+```
