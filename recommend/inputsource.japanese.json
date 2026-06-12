@@ -1,0 +1,47 @@
+{
+	"description": "입력소스: 애플일본어 - right cmd 히라가나 카타카나 토글",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Kotoeri\\.RomajiTyping\\.Japanese\\.Katakana$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "히라가나",
+			"from": { "key_code": "right_command" },
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Kotoeri\\.RomajiTyping\\.Japanese$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "카타카나",
+			"from": { "key_code": "right_command" },
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
+			"type": "basic"
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"description": "입력소스: 구름 - right cmd 한/영, option 한자 - 아무 추가설정 없는 간단 버전",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "한/영",
+			"from": { "key_code": "right_command" },
+			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent toggle" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "한자",
+			"from": { "key_code": "right_option" },
+			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent hanja" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+					"type": "input_source_unless"
+				}
+			],
+			"description": "구름 입력기가 아니면 구름 영문 - 입력소스가 다양해도 한영키만으로 한/영 복구",
+			"from": { "key_code": "right_command" },
+			"to": [{ "select_input_source": { "input_source_id": "org.youknowone.inputmethod.Gureum.system" } }],
+			"type": "basic"
+		}
+	]
+}

@@ -1,0 +1,151 @@
+{
+	"description": "입력소스 전환: 구름<>애플 토글 right cmd + option + (1 애플한글, 2 구름한글, 3 히라가나, 4 가타카나)",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				}
+			],
+			"description": "구름 입력기 한글 cmd + option + 1",
+			"from": {
+				"key_code": "1",
+				"modifiers": { "mandatory": ["right_command", "right_option"] }
+			},
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism org.youknowone.inputmethod.Gureum.han2" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				}
+			],
+			"description": "기본 한글 cmd + option + 2",
+			"from": {
+				"key_code": "2",
+				"modifiers": { "mandatory": ["right_command", "right_option"] }
+			},
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				}
+			],
+			"description": "기본 히라가나 cmd + option + 3",
+			"from": {
+				"key_code": "3",
+				"modifiers": { "mandatory": ["right_command", "right_option"] }
+			},
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				}
+			],
+			"description": "기본 가타카나 cmd + option + 4",
+			"from": {
+				"key_code": "4",
+				"modifiers": { "mandatory": ["right_command", "right_option"] }
+			},
+			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "구름 입력기, 기본 영문 토글",
+			"from": {
+				"simultaneous": [
+					{ "key_code": "right_command" },
+					{ "key_code": "right_option" }
+				],
+				"simultaneous_options": { "key_down_order": "insensitive" }
+			},
+			"to": [
+				{
+					"key_code": "right_option",
+					"modifiers": ["right_command"]
+				}
+			],
+			"to_if_alone": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.keylayout.ABC" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+					"type": "input_source_unless"
+				}
+			],
+			"description": "구름 입력기, 기본 영문 토글",
+			"from": {
+				"simultaneous": [
+					{ "key_code": "right_command" },
+					{ "key_code": "right_option" }
+				],
+				"simultaneous_options": { "key_down_order": "insensitive" }
+			},
+			"to": [
+				{
+					"key_code": "right_option",
+					"modifiers": ["right_command"]
+				}
+			],
+			"to_if_alone": [{ "shell_command": "/opt/homebrew/bin/macism org.youknowone.inputmethod.Gureum.system" }],
+			"type": "basic"
+		}
+	]
+}

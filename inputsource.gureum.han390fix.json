@@ -1,0 +1,35 @@
+{
+	"description": "입력소스: 구름 세벌씩390 2,3 (Shift + ,.) 문제 우회",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum\\.han390$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "Shift+,",
+			"from": {
+				"key_code": "comma",
+				"modifiers": { "mandatory": ["shift"] }
+			},
+			"to": [{ "key_code": "keypad_2" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum\\.han390$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "Shift+.",
+			"from": {
+				"key_code": "period",
+				"modifiers": { "mandatory": ["shift"] }
+			},
+			"to": [{ "key_code": "keypad_3" }],
+			"type": "basic"
+		}
+	]
+}
