@@ -47,7 +47,9 @@ brew install --cask gureumkim
 ### home, end 키
 
 [home.end.json](./recommend/home.end.json)
-* 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 브라우저 등 에서 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 앱에 따라 ctrl + a,e 와 cmd + left,right 중 선택 적용하면 됩니다.
+* 적용 앱 : slack, chrome, safari, edge, firefox, opera, whale, [mark](https://playloom.app/mark)
 
 ### 언어별 입력 소스 전환
 
