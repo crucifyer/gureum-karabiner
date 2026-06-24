@@ -18,7 +18,7 @@
 				"key_code": "1",
 				"modifiers": { "mandatory": ["right_command", "right_option"] }
 			},
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism org.youknowone.inputmethod.Gureum.han2" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism org.youknowone.inputmethod.Gureum.han2" }],
 			"type": "basic"
 		},
 		{
@@ -38,7 +38,7 @@
 				"key_code": "2",
 				"modifiers": { "mandatory": ["right_command", "right_option"] }
 			},
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
 			"type": "basic"
 		},
 		{
@@ -58,7 +58,7 @@
 				"key_code": "3",
 				"modifiers": { "mandatory": ["right_command", "right_option"] }
 			},
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
 			"type": "basic"
 		},
 		{
@@ -78,7 +78,7 @@
 				"key_code": "4",
 				"modifiers": { "mandatory": ["right_command", "right_option"] }
 			},
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
 			"type": "basic"
 		},
 		{
@@ -111,7 +111,7 @@
 					"modifiers": ["right_command"]
 				}
 			],
-			"to_if_alone": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.keylayout.ABC" }],
+			"to_if_alone": [{ "shell_command": "$HOME/.local/bin/macism com.apple.keylayout.ABC" }],
 			"type": "basic"
 		},
 		{
@@ -144,7 +144,7 @@
 					"modifiers": ["right_command"]
 				}
 			],
-			"to_if_alone": [{ "shell_command": "/opt/homebrew/bin/macism org.youknowone.inputmethod.Gureum.system" }],
+			"to_if_alone": [{ "shell_command": "$HOME/.local/bin/macism org.youknowone.inputmethod.Gureum.system" }],
 			"type": "basic"
 		}
 	]

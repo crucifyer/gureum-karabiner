@@ -1,0 +1,43 @@
+{
+	"description": "Finder에서 마우스 뒤로, 앞으로 적용",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.apple\\.finder$"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"description": "Finder에서 마우스 뒤로",
+			"from": { "pointing_button": "button4" },
+			"to": [
+				{
+					"key_code": "open_bracket",
+					"modifiers": ["left_command"]
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{로
+					"bundle_identifiers": [
+						"^com\\.apple\\.finder$"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"description": "Finder에서 마우스 앞으로",
+			"from": { "pointing_button": "button5" },
+			"to": [
+				{
+					"key_code": "close_bracket",
+					"modifiers": ["left_command"]
+				}
+			],
+			"type": "basic"
+		}
+	]
+}

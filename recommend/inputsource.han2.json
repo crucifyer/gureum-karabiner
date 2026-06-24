@@ -19,7 +19,7 @@
 			],
 			"description": "한/영",
 			"from": { "key_code": "right_command" },
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.keylayout.ABC" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.keylayout.ABC" }],
 			"type": "basic"
 		},
 		{
@@ -40,7 +40,7 @@
 			],
 			"description": "한/영",
 			"from": { "key_code": "right_command" },
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
 			"type": "basic"
 		},
 		{

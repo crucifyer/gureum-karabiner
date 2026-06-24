@@ -1,5 +1,5 @@
 {
-	"description": "브라우저에서 Home/End를 줄 맨 앞/뒤 이동으로 변경",
+	"description": "Home/End를 줄 맨 앞/뒤 이동으로 변경",
 	"manipulators": [
 		{
 			"conditions": [
@@ -11,7 +11,13 @@
 						"^com\\.microsoft\\.edgemac$",
 						"^org\\.mozilla\\.firefox$",
 						"^com\\.operasoftware\\.Opera$",
-						"^com\\.naver\\.Whale$"
+						"^com\\.naver\\.Whale$",
+						"^com\\.apple\\.dt\\.Xcode$",
+						"^com\\.openai\\.codex$",
+						"^com\\.google\\.antigravity-ide$",
+						"^com\\.anthropic\\.claudefordesktop$",
+						"^ai\\.opencode\\.desktop$",
+						"^ru\\.keepcoder\\.Telegram$"
 					],
 					"type": "frontmost_application_if"
 				}
@@ -39,7 +45,13 @@
 						"^com\\.microsoft\\.edgemac$",
 						"^org\\.mozilla\\.firefox$",
 						"^com\\.operasoftware\\.Opera$",
-						"^com\\.naver\\.Whale$"
+						"^com\\.naver\\.Whale$",
+						"^com\\.apple\\.dt\\.Xcode$",
+						"^com\\.openai\\.codex$",
+						"^com\\.google\\.antigravity-ide$",
+						"^com\\.anthropic\\.claudefordesktop$",
+						"^ai\\.opencode\\.desktop$",
+						"^ru\\.keepcoder\\.Telegram$"
 					],
 					"type": "frontmost_application_if"
 				}

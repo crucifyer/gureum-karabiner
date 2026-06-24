@@ -16,8 +16,16 @@
 
 ```bash
 brew install --cask karabiner-elements
+
+# ~/.local/bin 디렉토리를 만들고 PATH 에 추가하세요. 
 brew tap laishulu/homebrew
+brew trust --formula laishulu/homebrew/macism
 brew install macism
+cp $HOME/.local/bin/macism ~/.local/bin
+brew remove macism
+brew untap laishulu/homebrew
+# 이렇게 하는 이유는 개인이 관리하는 저장소를 신뢰하는 채로 놔두는 것이 보안상 안좋기 때문입니다.
+
 brew install --cask gureumkim
 ```
 
@@ -47,7 +55,15 @@ brew install --cask gureumkim
 ### home, end 키
 
 [home.end.json](./recommend/home.end.json)
-* 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 브라우저 등 에서 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 앱에 따라 ctrl + a,e 와 cmd + left,right 중 선택 적용하면 됩니다.
+
+### 마우스 뒤로, 앞으로
+
+[finder.mouse.back.forward.json](./recommend/finder.mouse.back.forward.json)
+* 파인더에 마우스의 뒤로, 앞으로 버튼을 적용합니다.
+* 뒤로 > left cmd + [
+* 앞으로 > left cmd + ]
 
 ### 언어별 입력 소스 전환
 
@@ -94,3 +110,12 @@ brew install --cask gureumkim
 
 [inputsource.gureum.han390fix.json](./inputsource.gureum.han390fix.json)
 * 이 우회법은 karabiner-elements 만으로 동작합니다.
+
+## vim esc 영문 전환
+
+* esc 로 영문 전환은 vim 에서만 편리합니다.
+* ~/.vimrc
+
+```vimrc
+inoremap <silent> <Esc> <Esc>:!/Library/Input\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent roman<CR><Esc>
+```
