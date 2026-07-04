@@ -12,20 +12,34 @@
 
 * karabiner-elements : 가상 키보드 드라이버를 설치하여 최상위에서 키보드 이벤트를 완전히 제어합니다.
 * macism : 맥의 입력 소스 전환시 자주 발생하는 메뉴 막대 표기만 바뀌고 실제 입력 소스 전환이 안되는 버그를 포커스 전환으로 우회하는 도구 입니다. 포커스 전환이라는 방식 때문에 전환 후 타자가 가능하기 까지 시간이 좀 걸립니다.
-* gureumkim : 입력 소스 전환시 자체적으로도 전환하여 버그를 우회하는 구름 입력기 입니다.
 
 ```bash
 brew install --cask karabiner-elements
+
+# ~/.local/bin 디렉토리를 만들고 PATH 에 추가하세요. 
 brew tap laishulu/homebrew
+brew trust --formula laishulu/homebrew/macism
 brew install macism
-brew install --cask gureumkim
+cp $HOME/.local/bin/macism ~/.local/bin
+brew remove macism
+brew untap laishulu/homebrew
+# 이렇게 하는 이유는 개인이 관리하는 저장소를 신뢰하는 채로 놔두는 것이 보안상 안좋기 때문입니다.
 ```
+Karabiner-Elements.app 을 실행하고, 안내대로 권한설정을 해야 합니다.
+
+재부팅이 필요할 수 있습니다.
+
+### cli 패치된 구름 입력기 빌드
+
+* [gureum-cli](https://github.com/crucifyer/gureum) 의 안내대로 빌드하세요.
 
 ### 구름 입력기 설치 후 입력 소스 추가
 
 * 시스템 설정 > 키보드 > 텍스트 입력 > 입력 소스 > 편집
 * 좌 하단 +
 * 한국어, 영어 둘 모두 구름 아이콘이 있는 것으로 추가해야 합니다.
+* 한국어 두벌씩, 영어 로마자로 추가하세요.
+* 영어 선택지가 안보이면 하단 검색에 영어 를 입력하세요.
 * 입력 소스가 안보이면 스크롤을 죽죽 내리면서 아무거나 마구 선택한 후 다시 한국어로 돌아오면 나타납니다.
 * 메뉴 막대의 구름 입력기를 클릭하고 환경설정에 들어가서 모든 단축키를 해제합니다.
 
@@ -47,7 +61,15 @@ brew install --cask gureumkim
 ### home, end 키
 
 [home.end.json](./recommend/home.end.json)
-* 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 브라우저 등 에서 문서의 처음과 끝이 아닌 줄의 처음과 끝으로 변경
+* 앱에 따라 ctrl + a,e 와 cmd + left,right 중 선택 적용하면 됩니다.
+
+### 마우스 뒤로, 앞으로
+
+[finder.mouse.back.forward.json](./recommend/finder.mouse.back.forward.json)
+* 파인더에 마우스의 뒤로, 앞으로 버튼을 적용합니다.
+* 뒤로 > left cmd + [
+* 앞으로 > left cmd + ]
 
 ### 언어별 입력 소스 전환
 
@@ -94,3 +116,12 @@ brew install --cask gureumkim
 
 [inputsource.gureum.han390fix.json](./inputsource.gureum.han390fix.json)
 * 이 우회법은 karabiner-elements 만으로 동작합니다.
+
+## vim esc 영문 전환
+
+* esc 로 영문 전환은 vim 에서만 편리합니다.
+* ~/.vimrc
+
+```vimrc
+inoremap <silent> <Esc> <Esc>:!/Library/Input\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent roman<CR><Esc>
+```

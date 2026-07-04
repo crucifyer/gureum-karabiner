@@ -19,7 +19,7 @@
 			],
 			"description": "히라가나",
 			"from": { "key_code": "right_command" },
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese" }],
 			"type": "basic"
 		},
 		{
@@ -40,7 +40,7 @@
 			],
 			"description": "카타카나",
 			"from": { "key_code": "right_command" },
-			"to": [{ "shell_command": "/opt/homebrew/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
+			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese.Katakana" }],
 			"type": "basic"
 		}
 	]
