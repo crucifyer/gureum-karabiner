@@ -38,7 +38,7 @@
 					"type": "input_source_if"
 				}
 			],
-			"description": "한자",
+			"description": "한자,이모티콘",
 			"from": { "key_code": "right_option" },
 			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent hanja" }],
 			"type": "basic"

@@ -94,13 +94,13 @@ Karabiner-Elements.app 을 실행하고, 안내대로 권한설정을 해야 합
 
 [inputsource.gureum.json](./recommend/inputsource.gureum.json)
 * 한영 : right cmd
-* 한자 : right option
+* 한자,이모티콘 : right option - 글을 입력하고 누르면 선택지가 나오고, 입력 안하고 누르면 모드가 전환되며 연속으로 입력할 수 있고, esc 로 끊습니다. 이모티콘은 영문으로 검색됩니다.
 
 ### 애플 한글
 
 [inputsource.han2.json](./recommend/inputsource.han2.json)
 * 한영 : right cmd
-* 한자 : right option
+* 한자 : right option - 한글 단어를 입력 후 누르면 단어 단위로 변환됩니다.
 
 ### 애플 일본어
 

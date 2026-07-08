@@ -7,9 +7,10 @@
 					"bundle_identifiers": [
 						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
 						"^com\\.utmapp\\.UTM$",
-						"^com\\.microsoft\\.rdc\\.macos$"
+						"^com\\.microsoft\\.rdc\\.macos$",
+						"^com\\.apple\\.CharacterPaletteIM$"
 					],
-					"description": "원격/가상 데스크탑 제외",
+					"description": "원격/가상 데스크탑, 이모티콘 선택기 제외",
 					"type": "frontmost_application_unless"
 				},
 				{
@@ -28,9 +29,10 @@
 					"bundle_identifiers": [
 						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
 						"^com\\.utmapp\\.UTM$",
-						"^com\\.microsoft\\.rdc\\.macos$"
+						"^com\\.microsoft\\.rdc\\.macos$",
+						"^com\\.apple\\.CharacterPaletteIM$"
 					],
-					"description": "원격/가상 데스크탑 제외",
+					"description": "원격/가상 데스크탑, 이모티콘 선택기 제외",
 					"type": "frontmost_application_unless"
 				},
 				{
@@ -41,6 +43,44 @@
 			"description": "한/영",
 			"from": { "key_code": "right_command" },
 			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.apple\\.CharacterPaletteIM$"
+					],
+					"description": "이모티콘 선택기에서 기본 전환",
+					"type": "frontmost_application_if"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Korean\\.2SetKorean$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "한/영",
+			"from": { "key_code": "right_command" },
+			"to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.ABC" } }],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.apple\\.CharacterPaletteIM$"
+					],
+					"description": "이모티콘 선택기에서 기본 전환",
+					"type": "frontmost_application_if"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.keylayout\\.ABC$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "한/영",
+			"from": { "key_code": "right_command" },
+			"to": [{ "select_input_source": { "input_source_id": "com.apple.inputmethod.Korean.2SetKorean" } }],
 			"type": "basic"
 		},
 		{
