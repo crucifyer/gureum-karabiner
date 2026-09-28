@@ -19,7 +19,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.keylayout.ABC" }],
 			"type": "basic"
 		},
@@ -41,7 +44,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "$HOME/.local/bin/macism com.apple.inputmethod.Korean.2SetKorean" }],
 			"type": "basic"
 		},
@@ -60,7 +66,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.ABC" } }],
 			"type": "basic"
 		},
@@ -79,7 +88,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "select_input_source": { "input_source_id": "com.apple.inputmethod.Korean.2SetKorean" } }],
 			"type": "basic"
 		},
@@ -100,7 +112,10 @@
 				}
 			],
 			"description": "한자",
-			"from": { "key_code": "right_option" },
+			"from": {
+				"key_code": "right_option",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [
 				{
 					"key_code": "return_or_enter",

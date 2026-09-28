@@ -9,7 +9,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent toggle" }],
 			"type": "basic"
 		},
@@ -21,7 +24,10 @@
 				}
 			],
 			"description": "한자",
-			"from": { "key_code": "right_option" },
+			"from": {
+				"key_code": "right_option",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent hanja" }],
 			"type": "basic"
 		},
@@ -33,7 +39,10 @@
 				}
 			],
 			"description": "구름 입력기가 아니면 구름 영문 - 입력소스가 다양해도 한영키만으로 한/영 복구",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "select_input_source": { "input_source_id": "org.youknowone.inputmethod.Gureum.system" } }],
 			"type": "basic"
 		}

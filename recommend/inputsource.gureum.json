@@ -18,7 +18,10 @@
 				}
 			],
 			"description": "한/영",
-			"from": { "key_code": "right_command" },
+			"from": {
+				"key_code": "right_command",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent toggle" }],
 			"type": "basic"
 		},
@@ -39,7 +42,10 @@
 				}
 			],
 			"description": "한자,이모티콘",
-			"from": { "key_code": "right_option" },
+			"from": {
+				"key_code": "right_option",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
 			"to": [{ "shell_command": "/Library/Input\\ Methods/Gureum.app/Contents/MacOS/gureum-cli --silent hanja" }],
 			"type": "basic"
 		}
