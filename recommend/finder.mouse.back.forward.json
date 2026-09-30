@@ -22,7 +22,7 @@
 		},
 		{
 			"conditions": [
-				{로
+				{
 					"bundle_identifiers": [
 						"^com\\.apple\\.finder$"
 					],
